@@ -1,0 +1,14 @@
+<RCC>
+  <qresource>
+    <file>style.qss</file>
+    <file>../../Res/icon/about.png</file>
+    <file>../../Res/icon/bug.png</file>
+    <file>../../Res/icon/english.png</file>
+    <file>../../Res/icon/export.png</file>
+    <file>../../Res/icon/icon.png</file>
+    <file>../../Res/icon/open.png</file>
+    <file>../../Res/icon/quit.png</file>
+    <file>../../Res/icon/touwei.png</file>
+    <file>../../Res/icon/wen.png</file>
+  </qresource>
+</RCC>
