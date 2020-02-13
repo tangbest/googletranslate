@@ -2,23 +2,28 @@
 
 class CAppInit(object):
     def __init__(self):
+        print("App Init...")
         self._initSysPath()
 
     def _initSysPath(self):
         import os
         import sys
         lstPath = [
-            "..\\Scripts",
-            "..\\Scripts\\main",
-            "..\\Scripts\\qrcpy",
+            "qrcpy",  # 要写这个，否则qrc导出的py，import时找不到模块
         ]
+        sBase = os.path.abspath(".")
+        print("code base path: ", sBase)
         for sPath in lstPath:
-            sys.path.append(sPath)
+            sFullPath = os.path.join(sBase, sPath)
+            print("AppendPath: ", sFullPath)
+            sys.path.append(sFullPath)
 
 CAppInit()
 
 def Start():
-    import dlgmain
+    print("App Start...")
+    from view import dlgmain
     dlgmain.Start()
+
 
 Start()

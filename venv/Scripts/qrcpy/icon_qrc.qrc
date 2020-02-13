@@ -1,6 +1,6 @@
 <RCC>
   <qresource>
-    <file>style.qss</file>
+    <file>../../Res/style.qss</file>
     <file>../../Res/icon/about.png</file>
     <file>../../Res/icon/bug.png</file>
     <file>../../Res/icon/english.png</file>

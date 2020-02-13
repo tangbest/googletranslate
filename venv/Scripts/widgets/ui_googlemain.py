@@ -216,4 +216,6 @@ class Ui_MainWindow(object):
         self.actDestYing.setText(_translate("MainWindow", "英"))
         self.actDestRi.setText(_translate("MainWindow", "日"))
         self.actDestHan.setText(_translate("MainWindow", "韩"))
+
 import icon_qrc_rc
+#from qrcpy import icon_qrc_rc

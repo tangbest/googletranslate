@@ -2,10 +2,8 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import  *
-
 from googletrans import Translator
-
-from Scripts.widgets import ui_googlemain
+from widgets import ui_googlemain
 
 class CMainDlg(QMainWindow, ui_googlemain.Ui_MainWindow):
     def __init__(self):
@@ -28,11 +26,16 @@ class CMainDlg(QMainWindow, ui_googlemain.Ui_MainWindow):
         self.txtEditOri.setFocus(True)
 
     def _initStyle(self):
-        #return
+        qss_file = QFile(":Res/style.qss")
+        qss_file.open(QFile.ReadOnly)
+        qss = str(qss_file.readAll(), encoding='utf-8')
+        qss_file.close()
+        self.setStyleSheet(qss)
+        return
         try:
-            with open("../Res/style.qss") as f:
+            with open(sStylePath) as f:
                 style = f.read()  # 读取样式表
-                self.setStyleSheet(style)
+                self.setStyleSheet("../Res/style.qss")
         except:
             print("open stylesheet error")
 
